@@ -18,11 +18,11 @@ Step 3
 We recommend working within a virtual environment whenever using Python for projects. This keeps your dependencies for each project separate and organized. Instructions for setting up a virtual environment for your platform can be found in the [python docs](https://packaging.python.org/guides/installing-using-pip-and-virtual-environments/)
 
 ```bash
-python -m venv <name-of-your-environment>
+python -m venv env
 ```
 To activate the environment on Windows:
 ```bash
-source <name-of-your-environment>/Scripts/activate
+source env/Scripts/activate
 ```
 Step 4
 ### Initialize git in the folder you are working from
