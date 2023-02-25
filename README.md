@@ -38,7 +38,7 @@ Once you have git initialized and your virtual environment setup and active, now
 Run:
 
 ```bash
-git clone https://github.com/Adrianthebeloved/aigents.git
+git clone https://github.com/The-Travel-AIgents/aigents.git
 ```
 This will clone the remote repository to your local machine
 
