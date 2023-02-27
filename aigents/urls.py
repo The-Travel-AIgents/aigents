@@ -15,7 +15,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from app1.views import App1View
 
 urlpatterns = [
+    path('api/guide', App1View.as_view(), name='generate_guide'),
     path('admin/', admin.site.urls),
 ]
