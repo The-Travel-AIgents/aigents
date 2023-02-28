@@ -32,7 +32,7 @@ class App1View(View):
 
 
 class WelcomeView(View):
-    def get(self):
+    def get(self, request):
         return JsonResponse({
             'success': True,
             'message': 'Welcome to the Travel Aigent API'
