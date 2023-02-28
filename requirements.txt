@@ -19,3 +19,4 @@ tzdata==2022.7
 urllib3==1.26.14
 yarl==1.8.2
 python-dotenv
+gunicorn
