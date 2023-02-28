@@ -30,7 +30,7 @@ OPENAI_API_KEY = os.getenv('OPENAI_API_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.getenv('APP_DEBUG') == 'true'
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['travel-aigent.herokuapp.com']
 
 
 # Application definition
