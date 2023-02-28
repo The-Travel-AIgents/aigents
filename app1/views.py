@@ -17,18 +17,23 @@ class App1View(View):
 
         if not prompt:
             return JsonResponse({
+                'success': False,
                 'message': 'The prompt field is required.'
             }, status=400)
 
-        try:
-            response = Guide().generate(prompt=prompt)
-            data = response.get('choices')[0].text
-        except:
-            return JsonResponse({
-                'message': 'An internal server error occured.'
-            })
+        response = Guide().generate(prompt=prompt)
+        data = response.get('choices')[0].text
 
         return JsonResponse({
+            'success': True,
             'message': 'Successfully generated guide',
             'data': data
+        })
+
+
+class WelcomeView(View):
+    def get(self):
+        return JsonResponse({
+            'success': True,
+            'message': 'Welcome to the Travel Aigent API'
         })
