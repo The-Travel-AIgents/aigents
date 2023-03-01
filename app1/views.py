@@ -33,7 +33,7 @@ class App1View(View):
         activities_query = ''
 
         for date_and_place in dates_and_places:
-            customized_place_query += f'Please design the trip so that I spend the day of {date_and_place}'
+            customized_place_query += f'Please design the trip so that I spend the day of {date_and_place}. '
 
         for activity in activities:
             activities_query += f'{activity}'
