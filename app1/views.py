@@ -22,12 +22,15 @@ class App1View(View):
             }, status=400)
 
         response = Guide().generate(prompt=prompt)
-        data = response.get('choices')[0].text
+        print(response)
+        text = response.get('choices')[0].text
 
         return JsonResponse({
             'success': True,
             'message': 'Successfully generated guide',
-            'data': data
+            'data': {
+                'text': text,
+            }
         })
 
 
