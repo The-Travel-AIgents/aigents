@@ -14,7 +14,7 @@ class App1View(View):
         body_bytes = request.body.decode('utf-8')
         body = json.loads(body_bytes)
 
-        dates_and_places = body.get('places')  # day in place
+        dates_and_places = body.get('dates_and_places')  # day in place
         duration = body.get('duration')
         start_date = body.get('start_date')
         activities = body.get('activities')
