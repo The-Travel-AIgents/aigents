@@ -39,28 +39,23 @@ class App1View(View):
             activities_query += f'{activity}'
 
         prompt = f'''
-You are my new AI travel agent.  I want you to create a {duration} day trip starting on {start_date} for me in {destination}.  Please create a daily itinerary which includes the city I will be in (I can stay in the same city more than one day) and also what activities I'll do each day. Please include when I will travel between the various cities.
+I want you to create a {duration} day trip starting on {start_date} for me in {destination}.  Please create a daily itinerary which includes the city I will be in (I can stay in the same city more than one day) and also what activities I'll do each day. Please include when I will travel between the various cities.
 {customized_place_query}
 What time will I leave and arrive?  Also how should I travel between the cities by car, train, plane, etc?
 Please include which areas of each city I should stay in. 
 I'd like to try {activities_query}.  Please include these activities on some of the days.
-For any bullet point that includes one of these activities, please prepend the activity with ** in front of the activity
 I prefer something near {hotel_area}, but not too noisy.  
 Also if you have hotel recommendations to include, that would be helpful.  
-Please include the start and end time of each bullet point.
-I'd like to start my day at {start_time} and be finished by {end_time}.  
-I'd like the time at the front of each bullet point, like this.  "12pm-1pm. Stop for lunch at a local restaurant"
+Please include the start and end time of each activity.
+I'd like to start my day at {start_time} and be finished by {end_time}.
         '''
 
-        response = Guide().generate(prompt=prompt)
-        text = response.get('choices')[0].text
+        data = Guide().generate(prompt=prompt)
 
         return JsonResponse({
             'success': True,
             'message': 'Successfully generated guide',
-            'data': {
-                'text': text,
-            }
+            'data': data
         })
 
 
