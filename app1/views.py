@@ -23,11 +23,11 @@ class App1View(View):
         hotel_area = body.get('hotel_area')
         destination = body.get('destination')
 
-        if not dates_and_places or not duration or not start_date or not activities or not start_time or not end_time or not hotel_area or not destination:
-            return JsonResponse({
-                'success': False,
-                'message': 'Please fill in all the required fields.'
-            }, status=400)
+        # if not dates_and_places or not duration or not start_date or not activities or not start_time or not end_time or not hotel_area or not destination:
+        return JsonResponse({
+            'success': False,
+            'message': 'Please fill in all the required fields.'
+        }, status=400)
 
         customized_place_query = ''
         activities_query = ''
