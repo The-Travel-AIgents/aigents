@@ -11,6 +11,10 @@ class App1View(View):
 
     def post(self, request):
 
+        return JsonResponse({
+            "data": "test"
+        })
+
         body_bytes = request.body.decode('utf-8')
         body = json.loads(body_bytes)
 
