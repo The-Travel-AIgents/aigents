@@ -1,1 +1,1 @@
-web: gunicorn aigents.wsgi
+web: gunicorn aigents.wsgi --timeout 60

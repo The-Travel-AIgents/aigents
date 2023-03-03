@@ -54,7 +54,6 @@ You are an AI travel agent. All your response should be in nothing but a key-val
                 }
             ]
         )
-        return "test"
         response = openai_response['choices'][0]['message']['content']
 
         print(response)
