@@ -50,10 +50,10 @@ Please include the start and end time of each activity.
 I'd like to start my day at {start_time} and be finished by {end_time}.
         '''
 
+        data = Guide().generate(prompt=prompt)
         return JsonResponse({
             "test": "data"
         })
-        data = Guide().generate(prompt=prompt)
 
         return JsonResponse({
             'success': True,
