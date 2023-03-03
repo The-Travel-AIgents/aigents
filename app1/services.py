@@ -13,12 +13,39 @@ class Guide:
             messages=[
                 {
                     'role': 'system',
-                    'content': 'You are an AI travel agent. All your response should be in a key-value JSON format. Format the JSON in such a way that the result can be used programmatically. Do not add any newline (i.e /n) between your response.'
+                    'content': '''
+You are an AI travel agent. All your response should be in nothing but a key-value JSON format. Do not add any newline(i.e / n) between your response. Do not add any other response other than the JSON response. Format the JSON in the following format:
+{
+"trip":
+    "city_itinerary": [
+        "activities": [],
+        "area_to_stay": "",
+        "city": "",
+        "date": ""
+        "hotel_recommendation": {
+            "name": "",
+            "location": "",
+            "rating": "",
+            "contact": {
+                "phone": "",
+                "email": "",
+                "website": ""
+            }
+        }
+    ],
+    "travel_itinerary": {},
+    "end_date": "",
+    "start_date": "",
+    "destination": ""
+}
+                            '''
                 },
                 {'role': 'user', 'content': prompt}
             ]
         )
 
         response = openai_response['choices'][0]['message']['content']
+
+        print(response)
 
         return json.loads(response)

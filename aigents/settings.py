@@ -63,6 +63,7 @@ MIDDLEWARE = [
 CORS_ALLOWED_ORIGINS = [
     'https://travel-aigent.herokuapp.com',
     'https://travel-aigent-app.herokuapp.com',
+    'http://localhost:3000'
 ]
 
 ROOT_URLCONF = 'aigents.urls'
