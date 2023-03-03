@@ -2,6 +2,7 @@ from django.shortcuts import render
 from django.http import JsonResponse
 from django.views import View
 from app1.services import Guide
+from .models import Email
 import json
 
 # Create your views here.
@@ -63,3 +64,19 @@ class WelcomeView(View):
             'success': True,
             'message': 'Welcome to the Travel Aigent API'
         })
+
+class EmailView(View):
+
+    def post(self, request):
+        email = request.POST.get('email')
+        if email:
+            Email.objects.create(email=email)
+            return JsonResponse({
+                'success': True,
+                'message': 'Thanks for signing up!'
+            })
+        else:
+            return JsonResponse({
+                'success': False,
+                'message': 'Please provide an email address.'
+            })
