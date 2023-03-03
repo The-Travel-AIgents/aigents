@@ -43,7 +43,7 @@ I want you to create a {duration} day trip starting on {start_date} for me in {d
 What time will I leave and arrive?  Also how should I travel between the cities by car, train, plane, etc?
 Please include which areas of each city I should stay in. 
 I'd like to try {activities_query}.  Please include these activities on some of the days.
-I prefer something near {hotel_area}, but not too noisy.  
+I prefer something near {hotel_area}, but not too noisy.
 Also if you have hotel recommendations to include, that would be helpful.  
 Please include the start and end time of each activity.
 I'd like to start my day at 9:00 AM and be finished by dinner.
