@@ -18,12 +18,10 @@ class App1View(View):
         duration = body.get('duration')
         start_date = body.get('start_date')
         activities = body.get('activities')
-        start_time = body.get('start_time')
-        end_time = body.get('end_time')
         hotel_area = body.get('hotel_area')
         destination = body.get('destination')
 
-        if not dates_and_places or not duration or not start_date or not activities or not start_time or not end_time or not hotel_area or not destination:
+        if not dates_and_places or not duration or not start_date or not activities or not hotel_area or not destination:
             return JsonResponse({
                 'success': False,
                 'message': 'Please fill in all the required fields.'
@@ -47,7 +45,7 @@ I'd like to try {activities_query}.  Please include these activities on some of 
 I prefer something near {hotel_area}, but not too noisy.  
 Also if you have hotel recommendations to include, that would be helpful.  
 Please include the start and end time of each activity.
-I'd like to start my day at {start_time} and be finished by {end_time}.
+I'd like to start my day at 9:00 AM and be finished by dinner.
         '''
 
         data = Guide().generate(prompt=prompt)
