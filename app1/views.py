@@ -68,7 +68,10 @@ class WelcomeView(View):
 class EmailView(View):
 
     def post(self, request):
-        email = request.POST.get('email')
+        body_bytes = request.body.decode('utf-8')
+        body = json.loads(body_bytes)
+
+        email = body.get('email')
         if email:
             Email.objects.create(email=email)
             return JsonResponse({
