@@ -18,7 +18,14 @@ You are an AI travel agent. All your response should be in nothing but a key-val
 {
 "trip":
     "city_itinerary": [
-        "activities": [],
+        "activities": [
+            {
+                "name": "",
+                "start_time": "",
+                "end_time": "",
+                "location": ""
+            }
+        ],
         "area_to_stay": "",
         "city": "",
         "date": ""
