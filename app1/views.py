@@ -51,9 +51,6 @@ I'd like to start my day at {start_time} and be finished by {end_time}.
         '''
 
         data = Guide().generate(prompt=prompt)
-        return JsonResponse({
-            "test": "data"
-        })
 
         return JsonResponse({
             'success': True,

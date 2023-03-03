@@ -8,6 +8,8 @@ class Guide:
         openai.api_key = settings.OPENAI_API_KEY
 
     def generate(self, prompt):
+        return "test"
+
         openai_response = openai.ChatCompletion.create(
             model='gpt-3.5-turbo',
             messages=[
