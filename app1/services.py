@@ -15,7 +15,7 @@ class Guide:
                 {
                     'role': 'system',
                     'content': '''
-You are an AI travel agent. All your response should be in nothing but a key-value JSON format. Do not add any newline(i.e / n) between your response. Do not add any other response other than the JSON response. Format the JSON in the following format:
+You are an AI travel agent. All your response should be in nothing but a key-value JSON format. Do not add any newline(i.e / n) between your response. Do not add any other text other than the JSON response. Format the JSON in the following format:
 {
 "trip":
     "city_itinerary": [
@@ -44,7 +44,8 @@ You are an AI travel agent. All your response should be in nothing but a key-val
     "travel_itinerary": {},
     "end_date": "",
     "start_date": "",
-    "destination": ""
+    "destination": "",
+    "additional_info": ""
 }
                             '''
                 },
