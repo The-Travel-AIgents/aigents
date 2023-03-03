@@ -34,6 +34,7 @@ ALLOWED_HOSTS = [
     'travel-aigent.herokuapp.com',
     os.getenv('APP_HOST', 'localhost'),
     'travel-aigent-app.herokuapp.com',
+    'travel-aigent.onrender.com',
 ]
 
 
@@ -63,7 +64,8 @@ MIDDLEWARE = [
 CORS_ALLOWED_ORIGINS = [
     'https://travel-aigent.herokuapp.com',
     'https://travel-aigent-app.herokuapp.com',
-    'http://localhost:3000'
+    'http://localhost:3000',
+    'https://travel-aigent.onrender.com'
 ]
 
 ROOT_URLCONF = 'aigents.urls'
